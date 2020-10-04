@@ -1,6 +1,6 @@
 # NgUpgrade [![MIT license](http://img.shields.io/badge/license-MIT-lightgrey.svg)](http://opensource.org/licenses/MIT)
 
-Sample project to upgrade from AngularJS to Angular (ng1 to ng4) using NgUpgrade and Angular CLI. 
+Sample project to upgrade from AngularJS to Angular (ng1 to ng10) using NgUpgrade and Angular CLI. 
 The frontend is generated with [Angular CLI](https://github.com/angular/angular-cli). The backend is made from scratch. Whole stack in [TypeScript](https://www.typescriptlang.org).
 
 This project uses a [EAN stack] @See(https://en.wikipedia.org/wiki/MEAN_(software_bundle)):

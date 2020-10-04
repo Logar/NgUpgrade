@@ -8,15 +8,15 @@ import { setAngularJSGlobal, downgradeComponent } from '@angular/upgrade/static'
 import * as angular from 'angular';
 import app from './app/app.module.ajs';
 import './app/ng1/controllers/nameController.controller';
-import { Ng4NameComponent } from './app/ng4/components/ng4-name.component';
+import { Ng10NameComponent } from './app/ng10/components/ng10-name.component';
 
 if (environment.production) {
   enableProdMode();
 }
 
 app.directive(
-  'ng4Name',
-  downgradeComponent({ component: Ng4NameComponent }) as angular.IDirectiveFactory
+  'ng10Name',
+  downgradeComponent({ component: Ng10NameComponent }) as angular.IDirectiveFactory
 );
 
 setAngularJSGlobal(angular);

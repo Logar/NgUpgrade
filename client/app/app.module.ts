@@ -4,14 +4,14 @@ import { NgModule } from '@angular/core';
 import { UpgradeModule } from '@angular/upgrade/static';
 import { downgradeComponent } from '@angular/upgrade/static';
 
-import { Ng4NameComponent } from './ng4/components/ng4-name.component';
+import { Ng10NameComponent } from './ng10/components/ng10-name.component';
 
 import * as angular from 'angular';
-import { SharedService } from './ng4/services/shared.service';
+import { SharedService } from './ng10/services/shared.service';
 
 @NgModule({
   declarations: [
-    Ng4NameComponent
+    Ng10NameComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +19,7 @@ import { SharedService } from './ng4/services/shared.service';
   ],
   providers: [SharedService],
   entryComponents: [
-    Ng4NameComponent
+    Ng10NameComponent
   ]
 })
 export class AppModule {
