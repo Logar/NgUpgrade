@@ -10,10 +10,16 @@
   </head>
   
   <body>
-    <form ng-controller="nameController" novalidate>
+    <form ng-controller="nameController" novalidate class="form">
       <ng4-name [name]="name">
-        <label>First Name: <input type="text" ng-model="name.firstname"></label><br />
-        <label>Last Name: <input type="text" ng-model="name.lastname"></label><br />
+        <div>
+          <label for="firstname">First Name: </label>
+          <input type="text" ng-model="name.firstname" class="form-control" id="firstname">
+        </div>
+        <div>  
+          <label for="lastname">Last Name: </label>
+          <input type="text" ng-model="name.lastname" class="form-control" id="lastname">
+        </div>
         <input type="submit" ng-click="onSubmit()" class="btn btn-primary" value="Submit">
       </ng4-name>
     </form>
