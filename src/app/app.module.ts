@@ -1,28 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { UpgradeModule } from "@angular/upgrade/static";
+import { UpgradeModule } from '@angular/upgrade/static';
 import { downgradeComponent } from '@angular/upgrade/static';
-import { HeroDetailComponent } from "./ng4/components/hero-detail.component";
+
+import { Ng4NameComponent } from './ng4/components/ng4-name.component';
+
 import * as angular from 'angular';
-import { Heroes } from "./ng4/services/hero.serivce";
-import { AppComponent } from "./ng4/app.component";
-import { TestDirective } from "./ng4/components/test.component";
+import { SharedService } from './ng4/services/shared.service';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeroDetailComponent,
-    TestDirective
+    Ng4NameComponent
   ],
   imports: [
     BrowserModule,
     UpgradeModule
   ],
-  providers: [Heroes],
+  providers: [SharedService],
   entryComponents: [
-    AppComponent,
-    HeroDetailComponent
+    Ng4NameComponent
   ]
 })
 export class AppModule {
