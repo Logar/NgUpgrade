@@ -6,6 +6,7 @@ import app from '../../app.module.ajs';
       $scope.onSubmit = function () {
         console.log('---- Submit handler inside ng1 ----');
         console.log('Name: ', $scope.firstname, $scope.lastname);
+        // console.log('Age: ', $scope.age);
         
         // Emit event to parent
         sharedService.emit({
