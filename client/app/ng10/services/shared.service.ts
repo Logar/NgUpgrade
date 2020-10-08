@@ -7,7 +7,7 @@ export class SharedService {
   observer: Observer<any>;
 
   constructor() {
-    this.observable = Observable.create((observer:Observer<any>) => {
+    this.observable = new Observable((observer:Observer<any>) => {
       this.observer = observer;
     }).share();
   }
