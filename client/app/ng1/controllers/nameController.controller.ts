@@ -4,8 +4,12 @@ import app from '../../app.module.ajs';
     app.controller('nameController', function ($scope, sharedService) {
       
       $scope.onSubmit = function () {
-        console.log('onSubmit inside ng1', $scope.name);
-        sharedService.broadcast({
+        console.log('---- Submit handler inside ng1 ----');
+        console.log('Name: ', $scope.firstname, $scope.lastname);
+        // console.log('Age: ', $scope.age);
+        
+        // Emit event to parent
+        sharedService.emit({
           name: 'event.submitted'
         });
       }
