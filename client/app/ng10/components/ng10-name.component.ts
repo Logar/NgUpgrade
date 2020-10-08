@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { SharedService } from '../services/shared.service';
 
 @Component({
@@ -7,13 +7,16 @@ import { SharedService } from '../services/shared.service';
     <ng-content></ng-content>
   `
 })  
-export class Ng10NameComponent {
-  @Input() name: string;
-  @Output() submitted = new EventEmitter<any>();
-  
-  constructor(private service: SharedService) {
+export class Ng10NameComponent implements OnInit{
+  @Input() firstname: String;
+  @Input() lastname: String;
+
+  constructor(private service: SharedService) { }
+
+  ngOnInit(): void {
     this.service.on('event.submitted', (event) => {
-      console.log('onSubmit inside ng10', this.name);
+      console.log('---- Submit handler inside ng10 ----');
+      console.log('Name: ', this.firstname, this.lastname);
     });
   }
 }

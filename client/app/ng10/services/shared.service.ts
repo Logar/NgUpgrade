@@ -11,8 +11,8 @@ export class SharedService {
       this.observer = observer;
     }).share();
   }
-
-  broadcast(event) {
+  
+  emit(event) {
     this.observer.next(event);
   }
 
